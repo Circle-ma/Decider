@@ -1,4 +1,4 @@
-# 🤔 選擇困難解決方案 (Decision Helper)
+# 🤔 選擇困難剋星 (Decider)
 
 [![Made with SolidJS](https://img.shields.io/badge/Made%20with-SolidJS-blue?style=for-the-badge&logo=solid)](https://www.solidjs.com/) [![Styled with DaisyUI](https://img.shields.io/badge/Styled%20with-DaisyUI-purple?style=for-the-badge&logo=daisyui)](https://daisyui.com/) [![Built with Tauri](https://img.shields.io/badge/Built%20with-Tauri-yellow?style=for-the-badge&logo=tauri)](https://tauri.app/)
 
@@ -8,7 +8,7 @@
 
 ### ✨ 告別選擇困難，讓它幫你拍板！
 
-你是否也常常在午餐吃什麼、週末看哪部電影、或者應該先做哪件工作這些「世紀難題」面前猶豫不決？🤯 別擔心，「選擇困難解決方案」來拯救你啦！
+你是否也常常在午餐吃什麼、週末看哪部電影、或者應該先做哪件工作這些「世紀難題」面前猶豫不決？🤯 別擔心，「選擇困難剋星」來拯救你啦！
 
 這是一款極簡、美觀且易用的桌面/移動應用程式，致力於用最優雅的方式幫助您在眾多選項中快速做出決定。我們相信，有時候，把選擇交給一點點「命運的安排」，生活會更有趣！
 
@@ -51,7 +51,7 @@
 
 ### ✨ Say Goodbye to Indecision, Let This App Decide for You!
 
-Do you often find yourself stuck wondering what to have for lunch, which movie to watch on the weekend, or which task to tackle first? 🤯 Worry no more! "Decision Helper" is here to save the day!
+Do you often find yourself stuck wondering what to have for lunch, which movie to watch on the weekend, or which task to tackle first? 🤯 Worry no more! "Decider" is here to save the day!
 
 This is a minimalist, beautiful, and easy-to-use desktop/mobile application dedicated to helping you quickly make decisions among various options in the most elegant way. We believe that sometimes, leaving a choice to a little bit of "fate" can make life more interesting!
 
