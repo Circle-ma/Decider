@@ -1,4 +1,4 @@
-# 🤔 選擇困難剋星 (Decider)
+# 🤔 選擇困難剋星 Decider
 # https://decider-alpha.vercel.app
 
 [![Made with SolidJS](https://img.shields.io/badge/Made%20with-SolidJS-blue?style=for-the-badge&logo=solid)](https://www.solidjs.com/) [![Styled with DaisyUI](https://img.shields.io/badge/Styled%20with-DaisyUI-purple?style=for-the-badge&logo=daisyui)](https://daisyui.com/) [![Built with Tauri](https://img.shields.io/badge/Built%20with-Tauri-yellow?style=for-the-badge&logo=tauri)](https://tauri.app/)
