@@ -14,6 +14,8 @@ import {
   STORAGE_KEY_CURRENT_CONFIG_ID,
   setCurrentConfigTitle,
   setCurrentOptions,
+  currentTheme, // <-- 新增導入
+  STORAGE_KEY_THEME, // <-- 新增導入
 } from "./store/optionsStore";
 import { t } from "./i18n";
 
@@ -98,6 +100,16 @@ const App: Component = () => {
       setCurrentConfigTitle(t("home_page_default_title"));
       setCurrentOptions([]);
     }
+  });
+
+  // --- Effect 5: 應用並持久化當前主題 ---
+  createEffect(() => {
+    const theme = currentTheme(); // 依賴 currentTheme signal
+    document.documentElement.setAttribute("data-theme", theme);
+    if (typeof window !== "undefined" && window.localStorage) {
+      localStorage.setItem(STORAGE_KEY_THEME, theme);
+    }
+    console.log(`[App.tsx Theme] Theme changed to: ${theme}`); // 可選日誌
   });
 
   return (

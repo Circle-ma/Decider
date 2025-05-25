@@ -62,6 +62,10 @@ export const zhTranslations = {
   delete_modal_confirm_part1: '您確定要永久刪除主題 "',
   delete_modal_confirm_part2: '" 嗎？',
   delete_modal_confirm_part3: "此操作無法復原。",
+  drawer_theme_settings_title: "佈景主題",
+  drawer_theme_toggle_aria: "切換佈景主題",
+  drawer_switch_to_dark_theme: "切換到深色模式",
+  drawer_switch_to_light_theme: "切換到淺色模式",
 };
 
 export type TranslationKeys = keyof typeof zhTranslations;

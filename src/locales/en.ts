@@ -71,4 +71,8 @@ export const enTranslations: Record<TranslationKeys, string> = {
     'Are you sure you want to permanently delete the topic "',
   delete_modal_confirm_part2: '"?',
   delete_modal_confirm_part3: "This action cannot be undone.",
+  drawer_theme_settings_title: "Theme",
+  drawer_theme_toggle_aria: "Toggle theme",
+  drawer_switch_to_dark_theme: "Switch to Dark Mode",
+  drawer_switch_to_light_theme: "Switch to Light Mode",
 };

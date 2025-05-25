@@ -13,6 +13,8 @@ import {
   setConfigToDelete,
   currentLanguage,
   setCurrentLanguage,
+  currentTheme, // <-- 新增導入
+  setCurrentTheme,
 } from "../store/optionsStore";
 import { t } from "../i18n";
 import HomePage from "../pages/HomePage";
@@ -21,6 +23,8 @@ import SettingsIcon from "./icons/SettingsIcon";
 import PlusIcon from "./icons/PlusIcon";
 import TrashIcon from "./icons/TrashIcon";
 import SearchIcon from "./icons/SearchIcon";
+import SunIcon from "./icons/SunIcon"; // <-- 新增導入
+import MoonIcon from "./icons/MoonIcon"; // <-- 新增導入
 
 const AppLayout: Component = () => {
   const drawerId = "app-main-drawer";
@@ -53,6 +57,10 @@ const AppLayout: Component = () => {
 
   const switchLanguage = (lang: "zh" | "en") => {
     setCurrentLanguage(lang);
+  };
+
+  const toggleTheme = () => {
+    setCurrentTheme(currentTheme() === "light" ? "dark" : "light");
   };
 
   return (
@@ -192,6 +200,38 @@ const AppLayout: Component = () => {
               中文
             </button>
           </li>
+
+          {/* --- 新增：主題切換器 --- */}
+          <div class="divider my-4"></div>
+          <li class="menu-title">
+            <span>{t("drawer_theme_settings_title")}</span>{" "}
+            {/* 需要添加 i18n key */}
+          </li>
+          <li>
+            <button
+              class="flex items-center py-2 px-3 hover:bg-base-300/60 rounded-lg w-full text-left"
+              onClick={toggleTheme}
+              aria-label={t("drawer_theme_toggle_aria")} /* 需要添加 i18n key */
+            >
+              <Show
+                when={currentTheme() === "dark"}
+                fallback={
+                  <SunIcon class="h-5 w-5 mr-2 shrink-0" />
+                } /* 淺色模式時顯示太陽圖示，提示可切換到深色 */
+              >
+                <MoonIcon class="h-5 w-5 mr-2 shrink-0" />{" "}
+                {/* 深色模式時顯示月亮圖示，提示可切換到淺色 */}
+              </Show>
+              <span>
+                {
+                  currentTheme() === "light"
+                    ? t("drawer_switch_to_dark_theme") /* 需要添加 i18n key */
+                    : t("drawer_switch_to_light_theme") /* 需要添加 i18n key */
+                }
+              </span>
+            </button>
+          </li>
+          {/* --- 結束新增 --- */}
 
           <div class="divider my-4"></div>
           <li class="menu-title">

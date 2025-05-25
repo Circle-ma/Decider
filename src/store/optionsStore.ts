@@ -16,6 +16,7 @@ export const CONFIGURATIONS_STORAGE_KEY =
 export const STORAGE_KEY_LANG = "decision_helper_lang_v1";
 export const STORAGE_KEY_CURRENT_CONFIG_ID =
   "decision_helper_current_config_id_v1";
+export const STORAGE_KEY_THEME = "decision_helper_theme_v1";
 
 console.log(
   "[Store Init] optionsStore.ts 模塊開始執行 (using localStorage for configurations).",
@@ -62,6 +63,20 @@ const getInitialLanguage = (): "zh" | "en" => {
 export const [currentLanguage, setCurrentLanguage] = createSignal<"zh" | "en">(
   getInitialLanguage(),
 );
+
+// --- 新增：初始主題狀態 ---
+const getInitialTheme = (): string => {
+  if (typeof window !== "undefined" && window.localStorage) {
+    const savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
+    // 這裡可以添加驗證，確保 savedTheme 是您已定義的有效主題之一
+    // 例如: if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
+    return savedTheme || "light"; // 默認為 'light' 主題
+  }
+  return "light"; // 默認主題
+};
+export const [currentTheme, setCurrentTheme] =
+  createSignal<string>(getInitialTheme());
+// --- 結束新增 ---
 
 // --- Initialize Configurations from localStorage ---
 function initializeConfigurations() {
